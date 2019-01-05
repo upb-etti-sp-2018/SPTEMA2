@@ -1,0 +1,23 @@
+T=40;
+f=1/T;
+t=-3*T:0.4:3*T;
+DUTY=42.5;
+N=50;
+SemnalInitial=square(2*pi*f*t,DUTY);
+fun0=@(t)square(2*pi*f*t,DUTY);
+CC=1/T*integral(fun0,0,T);
+Ck=zeros(1,N);
+Ak=zeros(1,N);
+SemnalRefacut=0;
+for (k=1:1:N)
+   fun=@(t)square(2*pi*f*t,DUTY).*exp(-2*pi*f*t*1j*(k-25));
+   Ck(k)=1/T*integral(fun,0,T);
+   Ak(k+1)=2*abs(Ck(k));
+   SemnalRefacut=SemnalRefacut+Ck(k)*exp(2*pi*f*t*1j*(k-25));
+end
+figure(1);
+plot(t,SemnalRefacut,t,SemnalInitial);
+figure(2)
+Ak(26)=abs(CC);
+Ak(1)=Ak(51);
+stem([0:N],Ak);
