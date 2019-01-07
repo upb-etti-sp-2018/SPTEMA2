@@ -1,0 +1,6 @@
+am ales DUTY CYCLE=17 ca fiind suma intre numarul meu din lista + numarul colegei mele (8+9)=>42.5
+deoarece suma este impara am ales un semnal de tip dreptunghiular;
+in cadrul problemei generez un semnal pe care il reconstruiesc cu ajutorul SFC (formulele prezentate 
+in enunt) si utilizez redefinirea functiilor din matlab pentru a putea calcula integrala pentru fiecare k
+(pentru fiecare coeficient Ck(k)) am ales sa scriu k-25 in loc de k normal pentru a merge in ambele sensuri
+ale spectrului, adica pentru a nu ramane numai pe partea pozitiva.
