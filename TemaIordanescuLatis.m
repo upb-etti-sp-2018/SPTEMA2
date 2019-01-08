@@ -21,10 +21,12 @@ figure(2)
 Ak(26)=abs(CC);
 Ak(1)=Ak(51);
 stem([0:N],Ak);
-%am ales DUTY CYCLE=17 ca fiind suma intre numarul echipei din lista 7=>
-%7*100/40=17.5
+%am ales DUTY CYCLE=17.5 ca fiind numarul echipei din lista de pe drive ( a
+%7-a echipa) => 7*100/40=17.5 
 %deoarece suma este impara am ales un semnal de tip dreptunghiular;
-%in cadrul problemei generez un semnal pe care il reconstruiesc cu ajutorul SFC (formulele prezentate 
-%in enunt) si utilizez redefinirea functiilor din matlab pentru a putea calcula integrala pentru fiecare k
-%(pentru fiecare coeficient Ck(k)) am ales sa scriu k-25 in loc de k normal pentru a merge in ambele sensuri
+%in cadrul problemei generam un semnal pe care il reconstruim cu ajutorul SFC (formulele prezentate 
+%in enunt) si utilizam redefinirea functiilor din matlab pentru a putea calcula integrala pentru fiecare k
+%(pentru fiecare coeficient Ck(k)) am ales sa scriem k-25 in loc de k normal pentru a merge in ambele sensuri
 %ale spectrului, adica pentru a nu ramane numai pe partea pozitiva.
+%am ales sa lasam valori si pe axa negativa in ciuda faptului ca in exemplu
+%exista numai valori pozitive raportat la Ox
